@@ -3,7 +3,9 @@
     padding: 0;
     box-sizing: border-box;
    }
-   
+       html, body {
+  overflow-y: auto;
+}
    /* Services Slide */
     .services {
       background: var(--secondary-blush);

@@ -1,3 +1,6 @@
+      html, body {
+  overflow-y: auto;
+}
   /* Gallery Slide */
     .gallery {
       background: var(--primary-blush);

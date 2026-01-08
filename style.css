@@ -21,6 +21,9 @@
       background: var(--secondary-blush);
       color: var(--dark-text);
     }
+        html, body {
+  overflow-y: auto;
+}
     
     /* Slider Container */
     .slider {

@@ -4,6 +4,9 @@
       box-sizing: border-box;
       font-family: 'Montserrat', sans-serif;
     }
+        html, body {
+  overflow-y: auto;
+}
 /* Contact Slide */
     .contact {
       background: linear-gradient(135deg, #f8e0e6 0%, #f5d0d8 100%);
