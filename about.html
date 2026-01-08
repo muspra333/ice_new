@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&family=Dancing+Script:wght@700&family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- About Slide -->
+<div class="stats">
+  <div class="stat"><h2>1200+</h2><p>Happy Couples</p></div>
+  <div class="stat"><h2>1467+</h2><p>Weddings</p></div>
+  <div class="stat"><h2>679+</h2><p>Decorations</p></div>
+  <div class="stat"><h2>1608+</h2><p>Locations</p></div>
+</div>
+
+<!-- MAIN SECTION -->
+<section class="section">
+
+  <!-- LEFT -->
+  <div class="left">
+    <small>Hi, I’m Wedding Service</small>
+    <h1>Exclusive Service For<br>Your Wedding Party</h1>
+    <p>
+      The ceremony is one of the most important days of your life.
+      We create unforgettable memories with elegant planning and
+      stunning decor designed specially for you.
+    </p>
+
+    <div class="info">
+      <div class="years">15+ <span>Years Experience</span></div>
+      <a href="#" class="btn">SHOP NOW</a>
+    </div>
+  </div>
+
+  <!-- RIGHT -->
+   <div class="main">
+  <div class="grid">
+    <div class="one">
+    <div class="cardtall">
+      <img src="./img/about1.jpg">
+    </div>
+    <div class="card" style="width: 450; height: 350; border-radius: 0 20px 20px 0;">
+      <img src="./img/ab2.jpg">
+    </div>
+    </div>
+</div>
+  <div class="grid">
+    <div class="two">
+
+    <div class="cardtall"style="width: 450; height: 350; border-radius: 20px 0 0 20px;">
+      <img src="./img/ab3.jpg">
+    </div>
+    <div class="card" >
+      <img src="./img/ab4.webp">
+    </div>
+    </div>
+  </div>
+  </div>
+
+  <img class="po-1" src="./img/cartton4-removebg-preview.png" alt="">
+  <img src="./img/cartton2-removebg-preview.png"  class="po-2">
+</section>
+<!-- Next page button -->
+<div id="page">
+  <div class="next-page-btn" onclick="goNext()">
+    <i class="fas fa-arrow-right"></i>
+  </div>
+</div>
+
+<!-- BACK HOME BUTTON -->
+    <div class="back-home-btn" onclick="goHome()">
+      <i class="fas fa-home"></i>
+    </div>
+
+
+  <script src="script.js"></script>
+  <script>
+    function goNext() {
+  const page = document.getElementById("page");
+  page.classList.add("scroll-right");
+  setTimeout(() => {
+    window.location.href = "service.html";
+  }, 800);
+}
+// ================previews button===============
+function goHome() {
+  const page = document.getElementById("page");
+  page.classList.add("scroll-left");
+
+  setTimeout(() => {
+    window.location.href = "index1.html";
+  }, 800);
+}
+  </script>
+</body>
+</html>

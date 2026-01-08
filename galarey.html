@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&family=Dancing+Script:wght@700&family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <link rel="stylesheet" href="style4.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+      <!-- Gallery Slide -->
+  <section class="slide gallery">
+    <h2>Our Gallery</h2>
+    <p class="gallery-subtitle">A glimpse into the magical weddings we've created</p>
+    
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0e4a6?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Wedding Decor">
+        <div class="gallery-overlay">
+          <h4>Elegant Ballroom Wedding</h4>
+          <p>Grand ballroom with crystal chandeliers</p>
+        </div>
+      </div>
+      
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Bride and Groom">
+        <div class="gallery-overlay">
+          <h4>Romantic Beach Wedding</h4>
+          <p>Sunset ceremony on the beach</p>
+        </div>
+      </div>
+      
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Wedding Cake">
+        <div class="gallery-overlay">
+          <h4>Custom Wedding Cake</h4>
+          <p>Five-tiered masterpiece</p>
+        </div>
+      </div>
+      
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Reception">
+        <div class="gallery-overlay">
+          <h4>Lavish Reception</h4>
+          <p>Evening celebration under the stars</p>
+        </div>
+      </div>
+      
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1537633552985-df8429e8048b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Bride Preparation">
+        <div class="gallery-overlay">
+          <h4>Bridal Preparation</h4>
+          <p>Getting ready with the bridal party</p>
+        </div>
+      </div>
+      
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1530099486328-0215777825af?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Ceremony">
+        <div class="gallery-overlay">
+          <h4>Garden Ceremony</h4>
+          <p>Floral arch in a blooming garden</p>
+        </div>
+      </div>
+
+        <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Wedding Cake">
+        <div class="gallery-overlay">
+          <h4>Custom Wedding Cake</h4>
+          <p>Five-tiered masterpiece</p>
+        </div>
+      </div>
+      
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Reception">
+        <div class="gallery-overlay">
+          <h4>Lavish Reception</h4>
+          <p>Evening celebration under the stars</p>
+        </div>
+      </div>
+    </div>
+    <!-- Dots Navigation -->
+<div class="dots">
+  <span class="active" data-slide="0"></span>
+  <span data-slide="1"></span>
+  <span data-slide="2"></span>
+  <span data-slide="3"></span>
+  <span data-slide="4"></span>
+  <span data-slide="5"></span>
+  <span data-slide="6"></span>
+</div>
+  </section>
+<!-- Next page button -->
+<div id="page">
+  <div class="next-page-btn" onclick="goNext()">
+    <i class="fas fa-arrow-right"></i>
+  </div>
+</div>
+
+<!-- BACK HOME BUTTON -->
+    <div class="back-home-btn" onclick="goHome()">
+      <i class="fas fa-home"></i>
+    </div>
+
+<script src="script.js"></script>
+
+  <script>
+    function goNext() {
+  const page = document.getElementById("page");
+  page.classList.add("scroll-right");
+  setTimeout(() => {
+    window.location.href = "contact.html";
+  }, 800);
+}
+// ================previews button===============
+function goHome() {
+  const page = document.getElementById("page");
+  page.classList.add("scroll-left");
+
+  setTimeout(() => {
+    window.location.href = "service.html";
+  }, 800);
+}
+  </script>
+</body>
+</html>

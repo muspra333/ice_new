@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&family=Dancing+Script:wght@700&family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="style.css">
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Montserrat', sans-serif;
+  background:#f9f6f2;
+  color:#333;
+}
+/* ================= STATS ================= */
+.stats{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  background:#e9ded2;
+  padding:30px 5%;
+  text-align:center;
+  border-radius:12px;
+  margin:50px 5%;
+  animation:fadeDown 1s ease;
+}
+.stt:hover{
+     box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.18),
+    0 0 30px rgba(200, 200, 200, 0.45);
+    transform: scale(1.1)
+}
+.stat{
+    transition: 0.8s;
+}
+
+.stat h2{
+  font-family:'Playfair Display', serif;
+  font-size:32px;
+}
+
+.stat p{
+  font-size:20px;
+  color:#666;
+}
+
+/* ================= SECTION ================= */
+.section{
+  display:grid;
+  grid-template-columns:1fr 1.2fr;
+  gap:50px;
+  padding:60px 5%;
+  align-items:center;
+  position: relative;
+}
+
+/* LEFT */
+.left small{
+  letter-spacing:2px;
+  color:#b38b59;
+  font-weight:500;
+}
+
+.left h1{
+  font-family:'Playfair Display', serif;
+  font-size:42px;
+  margin:15px 0;
+}
+
+.left p{
+  font-size:20px;
+  color:#666;
+  line-height:1.7;
+  margin-bottom:30px;
+}
+
+.info{
+  display:flex;
+  gap:30px;
+  align-items:center;
+}
+
+.years{
+  font-size:28px;
+  font-weight:700;
+}
+
+.years span{
+  display:block;
+  font-size:13px;
+  color:#888;
+}
+
+.btn{
+  padding:12px 28px;
+  border:1px solid #333;
+  text-decoration:none;
+  color:#333;
+  font-size:14px;
+  transition:.3s;
+}
+
+.btn:hover{
+  background:#333;
+  color:#fff;
+}
+
+/* RIGHT IMAGES */
+.grid{
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: space-evenly;
+ gap: 20px;
+  
+}
+.main{
+    display: grid;
+    gap: 40px;
+}
+.one{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.two{
+    display: flex;
+    justify-content: space-around;
+    gap: 50px;
+}
+.cardtall{
+  overflow:hidden;
+  object-fit: cover;
+  border-radius:14px;
+  box-shadow:0 15px 30px rgba(0,0,0,.15);
+  animation:zoomIn .8s ease forwards;
+  width: 250px;
+  height: 200px;
+}
+.card{
+  overflow:hidden;
+  object-fit: cover;
+  border-radius:14px;
+  box-shadow:0 15px 30px rgba(0,0,0,.15);
+  animation:zoomIn .8s ease forwards;
+  width: 250px;
+  height: 200px;
+}
+
+.card img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:.5s;
+}
+
+.card:hover img{
+  transform:scale(1.1);
+}
+.po-1{
+position: absolute;
+left:67%;
+right: 0;
+top: 50%;
+opacity: 0.3;
+}
+.po-2{
+position: absolute;
+left:39%;
+right: 0;
+top: 50%;
+opacity: 0.3;
+}
+/* ===== GLOW EFFECT FOR STATS & CARDS ===== */
+.stat,
+.card,
+.cardtall {
+  transition: transform 0.6s ease, box-shadow 0.6s ease;
+}
+
+.stat:hover,
+.card:hover,
+.cardtall:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow:
+    0 15px 40px rgba(0,0,0,0.18),
+    0 0 30px rgba(190,190,190,0.55);
+}
+.card img,
+.cardtall img {
+  animation: imageFloat 6s ease-in-out infinite;
+}
+
+@keyframes imageFloat {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+.left,
+.main,
+.stats {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: reveal 1s ease forwards;
+}
+
+.left { animation-delay: 0.2s; }
+.stats { animation-delay: 0.1s; }
+.main { animation-delay: 0.4s; }
+
+@keyframes reveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* ================= ANIMATIONS ================= */
+@keyframes fadeDown{
+  from{opacity:0; transform:translateY(-30px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
+@keyframes zoomIn{
+  from{opacity:0; transform:scale(.9);}
+  to{opacity:1; transform:scale(1);}
+}
+
+@media (max-width: 1024px) {
+  .section {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .info {
+    justify-content: center;
+  }
+
+  .main {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .one,
+  .two {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card,
+  .cardtall {
+    width: 90% !important;
+    height: auto;
+  }
+
+  .po-1,
+  .po-2 {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .left h1 {
+    font-size: 26px;
+  }
+
+  .left p {
+    font-size: 16px;
+  }
+
+  .stats {
+    margin: 20px;
+  }
+}
+
+
+</style>
+
+</head>
+<body>
+     <!-- About Slide -->
+<div class="stats">
+  <div class="stat"><h2>1200+</h2><p>Happy Couples</p></div>
+  <div class="stat"><h2>1467+</h2><p>Weddings</p></div>
+  <div class="stat"><h2>679+</h2><p>Decorations</p></div>
+  <div class="stat"><h2>1608+</h2><p>Locations</p></div>
+</div>
+
+<!-- MAIN SECTION -->
+<section class="section">
+
+  <!-- LEFT -->
+  <div class="left">
+    <small>Hi, I’m Wedding Service</small>
+    <h1>Exclusive Service For<br>Your Wedding Party</h1>
+    <p>
+      The ceremony is one of the most important days of your life.
+      We create unforgettable memories with elegant planning and
+      stunning decor designed specially for you.
+    </p>
+
+    <div class="info">
+      <div class="years">15+ <span>Years Experience</span></div>
+      <a href="#" class="btn">SHOP NOW</a>
+    </div>
+  </div>
+
+  <!-- RIGHT -->
+   <div class="main">
+  <div class="grid">
+    <div class="one">
+    <div class="cardtall">
+      <img src="./img/about1.jpg">
+    </div>
+    <div class="card" style="width: 450; height: 350; border-radius: 0 20px 20px 0;">
+      <img src="./img/ab2.jpg">
+    </div>
+    </div>
+</div>
+  <div class="grid">
+    <div class="two">
+
+    <div class="cardtall"style="width: 450; height: 350; border-radius: 20px 0 0 20px;">
+      <img src="./img/ab3.jpg">
+    </div>
+    <div class="card" >
+      <img src="./img/ab4.webp">
+    </div>
+    </div>
+  </div>
+  </div>
+
+  <img class="po-1" src="./img/cartton4-removebg-preview.png" alt="">
+  <img src="./img/cartton2-removebg-preview.png"  class="po-2">
+</section>
+
+<!-- Next page button -->
+<div id="page">
+  <div class="next-page-btn" onclick="goNext()">
+    <i class="fas fa-arrow-right"></i>
+  </div>
+</div>
+
+<!-- BACK HOME BUTTON -->
+    <div class="back-home-btn" onclick="goHome()">
+      <i class="fas fa-home"></i>
+    </div>
+
+
+  <script src="script.js"></script>
+  <script>
+    function goNext() {
+  const page = document.getElementById("page");
+  page.classList.add("scroll-right");
+  setTimeout(() => {
+    window.location.href = "service.html";
+  }, 800);
+}
+// ================previews button===============
+function goHome() {
+  const page = document.getElementById("page");
+  page.classList.add("scroll-left");
+
+  setTimeout(() => {
+    window.location.href = "index1.html";
+  }, 800);
+}
+  </script>
+</body>
+</html>

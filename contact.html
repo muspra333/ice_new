@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&family=Dancing+Script:wght@700&family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <link rel="stylesheet" href="style6.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Next page button -->
+<div id="page">
+  <div class="next-page-btn" onclick="goNext()">
+    <i class="fas fa-arrow-right"></i>
+  </div>
+</div>
+
+<!-- BACK HOME BUTTON -->
+    <div class="back-home-btn" onclick="goHome()">
+      <i class="fas fa-home"></i>
+    </div>
+
+  <!-- Contact Slide -->
+  <section class="slide contact">
+    <h2>Contact Us</h2>
+    <p class="contact-subtitle">Let's create your dream wedding together. Schedule a consultation today!</p>
+    
+    <div class="contact-container">
+      <div class="contact-info">
+        <div class="contact-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <div>
+            <h4>Our Location</h4>
+            <p>123 Wedding Lane, Suite 100<br>Boston, MA 02116</p>
+          </div>
+        </div>
+        
+        <div class="contact-item">
+          <i class="fas fa-phone-alt"></i>
+          <div>
+            <h4>Phone Number</h4>
+            <p>+1 (617) 555-0123</p>
+          </div>
+        </div>
+        
+        <div class="contact-item">
+          <i class="fas fa-envelope"></i>
+          <div>
+            <h4>Email Address</h4>
+            <p>info@bridalbliss.com</p>
+          </div>
+        </div>
+        
+        <div class="contact-item">
+          <i class="fas fa-clock"></i>
+          <div>
+            <h4>Business Hours</h4>
+            <p>Monday - Friday: 9am - 6pm<br>Saturday: 10am - 4pm</p>
+          </div>
+        </div>
+      </div>
+      
+      <form class="contact-form" id="contactForm">
+        <div class="form-group">
+          <label for="name">Your Name *</label>
+          <input type="text" id="name" class="form-control" placeholder="Enter your full name" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="email">Email Address *</label>
+          <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" class="form-control" placeholder="Enter your phone number">
+        </div>
+        
+        <div class="form-group">
+          <label for="wedding-date">Wedding Date</label>
+          <input type="date" id="wedding-date" class="form-control">
+        </div>
+        
+        <div class="form-group">
+          <label for="message">Your Message</label>
+          <textarea id="message" class="form-control" placeholder="Tell us about your vision for your wedding..." rows="4"></textarea>
+        </div>
+        
+        <button type="submit" class="submit-btn">Send Message</button>
+      </form>
+    </div>
+    <!-- Dots Navigation -->
+
+  </section>
+<script src="script.js"></script>
+
+  <script>
+    function goNext() {
+  const page = document.getElementById("page");
+  page.classList.add("scroll-right");
+  setTimeout(() => {
+    window.location.href = "footer.html";
+  }, 800);
+}
+// ================previews button===============
+function goHome() {
+  const page = document.getElementById("page");
+  page.classList.add("scroll-left");
+
+  setTimeout(() => {
+    window.location.href = "galarey.html";
+  }, 800);
+}
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&family=Dancing+Script:wght@700&family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Desktop Navigation Menu -->
+<nav class="desktop-nav">
+  <a href="#" class="logo">Bridal Bliss</a>
+  <div class="desktop-menu">
+    <a href="index1.html" class="active" data-index="0">Home</a>
+    <a href="about.html" data-index="1">About</a>
+    <a href="service.html" data-index="2">Services</a>
+    <a href="galarey.html" data-index="3">Gallery</a>
+    <a href="testimonial.html" data-index="4">Testimonials</a>
+    <a href="contact.hml" data-index="5">Contact</a>
+  </div>
+  <a href="#" class="desktop-cta" data-index="5">Book Consultation</a>
+</nav>
+
+<!-- Mobile Menu Button -->
+<button class="mobile-menu-btn">
+  <i class="fas fa-bars"></i>
+</button>
+
+<!-- Mobile Menu -->
+<nav class="mobile-menu">
+  <a href="#" class="active" data-index="0"><i class="fas fa-home"></i> Home</a>
+  <a href="#" data-index="1"><i class="fas fa-info-circle"></i> About</a>
+  <a href="#" data-index="2"><i class="fas fa-concierge-bell"></i> Services</a>
+  <a href="#" data-index="3"><i class="fas fa-images"></i> Gallery</a>
+  <a href="#" data-index="4"><i class="fas fa-comments"></i> Testimonials</a>
+  <a href="#" data-index="5"><i class="fas fa-envelope"></i> Contact</a>
+  <a href="#" data-index="5" class="mobile-cta"><i class="fas fa-calendar-check"></i> Book Consultation</a>
+</nav>
+
+<!-- Menu Overlay -->
+<div class="menu-overlay"></div>
+<!-- Progress Bar -->
+<div class="progress-container">
+  <div class="progress-bar"></div>
+</div>
+<!-- Next page button -->
+<div id="page">
+  <div class="next-page-btn" onclick="goNext()">
+    <i class="fas fa-arrow-right"></i>
+  </div>
+</div>
+<!-- BACK HOME BUTTON -->
+    <div class="back-home-btn" onclick="goHome()">
+      <i class="fas fa-home"></i>
+    </div>
+ 
+  <!-- Home Slide -->
+  <section class="slide home">
+     <div class="hero-content">
+    <h1>Wedding Photography To The Next Level With Wedist</h1>
+    <p>
+      Looking for a wedding photographer who approaches weddings in a documentary
+      and artistic way, trying to tell the story of your day honestly and inclusively.
+    </p>
+    <a href="galarey.html" class="hero-btn">VIEW COLLECTION</a>
+  </div>
+
+  <!-- Floating Images -->
+  <div class="floating-img img1"><img src="./img/img1.jpg"></div>
+  <div class="floating-img img2"><img src="./img/img2.webp"></div>
+  <div class="floating-img img3"><img src="./img/img5.avif"></div>
+  <div class="floating-img img4"><img src="./img/img3.avif"></div>
+
+  <!-- VEDIO  -->
+   <div class="video-box"onclick="togglePlay()">
+    <video id="weddingVideo">
+  <source src="./img/vedio/WhatsApp Video 2026-01-07 at 12.08.28 PM.mp4" type="video/mp4">
+    </video>
+    <div class="play-btn">▶</div>
+  </div>
+
+  </section>
+
+    <script src="script.js"></script>
+
+ <script>
+      
+ /* =================Next PAGE BUTTON ================= */
+function goNext() {
+  const page = document.getElementById("page");
+  page.classList.add("scroll-right");
+  setTimeout(() => {
+    window.location.href = "about.html";
+  }, 800);
+}
+// ================previews button===============
+function goHome() {
+  const page = document.getElementById("page");
+  page.classList.add("scroll-left");
+
+  setTimeout(() => {
+    window.location.href = "index.html";
+  }, 800);
+}
+
+// ===============vedio===================
+const video = document.getElementById('weddingVideo');
+const box = document.querySelector('.video-box');
+
+function togglePlay(){
+  if(video.paused){
+    video.play();
+    box.classList.add('playing');
+  }else{
+    video.pause();
+    box.classList.remove('playing');
+  }
+}
+    </script>
+</body>
+</html>

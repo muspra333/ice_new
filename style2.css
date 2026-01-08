@@ -1,0 +1,285 @@
+   * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+    }
+        /* Slider Container */
+    .slider {
+      display: flex;
+      width: 700vw;
+      height: 100vh;
+      transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+    }
+
+    /* Individual Slides */
+    .slide {
+      width: 100vw;
+      height: 100vh;
+      padding: 100px 60px 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+  body{
+  font-family:'Montserrat', sans-serif;
+  background:#f9f6f2;
+  color:#333;
+  height: 100vh;
+}
+/* ================= STATS ================= */
+.stats{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  background:#e9ded2;
+  padding:30px 5%;
+  text-align:center;
+  border-radius:12px;
+  margin:50px 5%;
+  animation:fadeDown 1s ease;
+}
+ 
+.stat h2{
+  font-family:'Playfair Display', serif;
+  font-size:32px;
+}
+
+.stat p{
+  font-size:20px;
+  color:#666;
+}
+
+/* ================= SECTION ================= */
+.section{
+  display:grid;
+  grid-template-columns:1fr 1.2fr;
+  gap:50px;
+  padding:60px 5%;
+  align-items:center;
+  position: relative;
+}
+
+/* LEFT */
+.left small{
+  letter-spacing:2px;
+  color:#b38b59;
+  font-weight:500;
+}
+
+.left h1{
+  font-family:'Playfair Display', serif;
+  font-size:42px;
+  margin:15px 0;
+}
+
+.left p{
+  font-size:20px;
+  color:#666;
+  line-height:1.7;
+  margin-bottom:30px;
+}
+
+.info{
+  display:flex;
+  gap:30px;
+  align-items:center;
+}
+
+.years{
+  font-size:28px;
+  font-weight:700;
+}
+
+.years span{
+  display:block;
+  font-size:13px;
+  color:#888;
+}
+
+.btn{
+  padding:12px 28px;
+  border:1px solid #333;
+  text-decoration:none;
+  color:#333;
+  font-size:14px;
+  transition:.3s;
+}
+
+.btn:hover{
+  background:#333;
+  color:#fff;
+}
+
+/* RIGHT IMAGES */
+.grid{
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: space-evenly;
+ gap: 20px;
+  
+}
+.main{
+    display: grid;
+    gap: 40px;
+}
+.one{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.two{
+    display: flex;
+    justify-content: space-around;
+    gap: 50px;
+}
+.cardtall{
+  overflow:hidden;
+  object-fit: cover;
+  border-radius:14px;
+  box-shadow:0 15px 30px rgba(0,0,0,.15);
+  animation:zoomIn .8s ease forwards;
+  width: 250px;
+  height: 200px;
+}
+.card{
+  overflow:hidden;
+  object-fit: cover;
+  border-radius:14px;
+  box-shadow:0 15px 30px rgba(0,0,0,.15);
+  animation:zoomIn .8s ease forwards;
+  width: 250px;
+  height: 200px;
+}
+
+.card img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:.5s;
+}
+
+.card:hover img{
+  transform:scale(1.1);
+}
+.po-1{
+position: absolute;
+left:67%;
+right: 0;
+top: 50%;
+opacity: 0.3;
+}
+.po-2{
+position: absolute;
+left:39%;
+right: 0;
+top: 50%;
+opacity: 0.3;
+}
+/* ===== GLOW EFFECT FOR STATS & CARDS ===== */
+.stat,
+.card,
+.cardtall {
+  transition: transform 0.6s ease, box-shadow 0.6s ease;
+}
+
+.stat:hover,
+.card:hover,
+.cardtall:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow:
+    0 15px 40px rgba(0,0,0,0.18),
+    0 0 30px rgba(190,190,190,0.55);
+}
+.card img,
+.cardtall img {
+  animation: imageFloat 6s ease-in-out infinite;
+}
+
+@keyframes imageFloat {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+.left,
+.main,
+.stats {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: reveal 1s ease forwards;
+}
+
+.left { animation-delay: 0.2s; }
+.stats { animation-delay: 0.1s; }
+.main { animation-delay: 0.4s; }
+
+@keyframes reveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* ================= ANIMATIONS ================= */
+@keyframes fadeDown{
+  from{opacity:0; transform:translateY(-30px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
+@keyframes zoomIn{
+  from{opacity:0; transform:scale(.9);}
+  to{opacity:1; transform:scale(1);}
+}
+
+@media (max-width: 1024px) {
+  .section {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .info {
+    justify-content: center;
+  }
+
+  .main {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .one,
+  .two {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card,
+  .cardtall {
+    width: 90% !important;
+    height: auto;
+  }
+
+  .po-1,
+  .po-2 {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .left h1 {
+    font-size: 26px;
+  }
+
+  .left p {
+    font-size: 16px;
+  }
+
+  .stats {
+    margin: 20px;
+  }
+}
+
+

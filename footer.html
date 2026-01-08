@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&family=Dancing+Script:wght@700&family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+      <!-- Footer Slide -->
+  <section class="slide footer">
+    <div class="footer-content">
+      <h2>Bridal Bliss</h2>
+      <p>Creating magical wedding experiences that last a lifetime. Let us help you plan the wedding of your dreams.</p>
+      
+      <div class="socials">
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-pinterest-p"></i>
+        <i class="fab fa-tiktok"></i>
+        <i class="fab fa-youtube"></i>
+      </div>
+      
+      <div class="copyright">
+        <p>&copy; 2024 Bridal Bliss Wedding Planning. All rights reserved.</p>
+        <p>Designed with <i class="fas fa-heart" style="color: #f8a8b8;"></i> for happy couples everywhere</p>
+      </div>
+    </div>
+    <!-- Dots Navigation -->
+<div class="dots">
+  <span class="active" data-slide="0"></span>
+  <span data-slide="1"></span>
+  <span data-slide="2"></span>
+  <span data-slide="3"></span>
+  <span data-slide="4"></span>
+  <span data-slide="5"></span>
+  <span data-slide="6"></span>
+</div>
+  </section>
+<!-- Next page button -->
+<div id="page">
+  <div class="next-page-btn" onclick="goNext()">
+    <i class="fas fa-arrow-right"></i>
+  </div>
+</div>
+
+<!-- BACK HOME BUTTON -->
+    <div class="back-home-btn" onclick="goHome()">
+      <i class="fas fa-home"></i>
+    </div>
+
+  <script src="script.js"></script>
+
+    <script>
+function goNext() {
+  const page = document.getElementById("page");
+  page.classList.add("scroll-right");
+  setTimeout(() => {
+    window.location.href = "index1.html";
+  }, 800);
+}
+// ================previews button===============
+function goHome() {
+  const page = document.getElementById("page");
+  page.classList.add("scroll-left");
+
+  setTimeout(() => {
+    window.location.href = "contact.html";
+  }, 800);
+}
+  </script>
+</body>
+</html>
